@@ -1,0 +1,48 @@
+/*@keyframes boxReverse{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(80px);
+    }
+}
+@keyframes box{
+    from {
+        transform: translateX(80px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+}
+*/
+
+/* Coeur */
+@keyframes fil {
+    // 0% {
+    //     opacity: 0;
+    // }
+    // 80% {
+    //     opacity: 0.4;
+    // }
+    // 100% {
+    //     opacity: 0.6;
+    // }
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+@keyframes fondu {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

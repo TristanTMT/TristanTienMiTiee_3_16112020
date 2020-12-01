@@ -1,0 +1,19 @@
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin btn($bordeRadius, $color, $background){
+    border-radius: $bordeRadius;
+    color: $color;
+    background: $background;
+}
+
+@mixin absoluteOrRelative($position, $top, $right, $bottom, $left){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+

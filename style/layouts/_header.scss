@@ -1,0 +1,19 @@
+header {
+    @extend %flexbox;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    .return{
+        margin-left: 1rem;
+    }
+    // .logo{
+    //     height: 20px;
+    //     margin: auto;
+    // }
+    h2 {
+        font-family: 'Shrikhand', cursive;
+        font-size: 30px;
+        margin: auto;
+    }
+}
+

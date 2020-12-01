@@ -1,0 +1,73 @@
+@media (max-width: 330px) {
+  .lineClamp--2 {
+    & h3, p{
+      -webkit-line-clamp: 2;
+    }
+  }
+}
+@media (min-width: $tablet) {
+  .restaurants__popup {
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 78%);
+  }
+  .main {
+      padding: 0 2rem 0 2rem;
+    }
+  .background__image img {
+    height: 350px;
+    width: 350px;
+  }
+  .background__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 5rem 0;
+  }
+  .restaurants__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+}
+
+@media (min-width: 768px){
+  .container__menusCards{
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      grid-gap: 3rem;
+  }
+}
+
+@media (min-width: $laptop) {
+  .wrapper {
+    padding: 0 2rem 0 2rem;
+  }
+  .restaurants__popup {
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 83%);
+  }
+  .container__menusCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  .menus {
+    background: none;
+  }
+}
+@media (min-width: $desktop) {
+  .restaurants__popup {
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 78%);
+  }
+  .restaurants__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .background__image img {
+    height: 450px;
+    width: 450px;
+  }
+  .container__menusCards{
+    grid-gap: 3rem;
+  }
+}

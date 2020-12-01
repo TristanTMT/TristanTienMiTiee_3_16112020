@@ -1,0 +1,29 @@
+{
+  "name": "site_ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style/style.scss:./style/style.css"
+  },
+  "browserslist": [
+    "null"
+  ],
+  "author": "",
+  "license": "ISC",
+  "window.zoomLevel": 0,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.formats": [
+        
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        }
+    ]
+  
+}

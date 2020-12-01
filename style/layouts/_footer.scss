@@ -1,0 +1,29 @@
+#footer {
+    background: $colorFooter;
+    color: $colorTextFooter;
+    padding: 20px;
+    li {
+        margin: 5px;
+    }
+    & li:first-child {
+        margin-bottom: 20px;
+    }
+    & li:nth-child(2) {
+        @extend %flexbox;
+    }
+    & li:nth-child(3) {
+        @extend %flexbox;
+    }
+    & li i {
+        margin-right: 5px;
+    }
+}
+
+#footer {
+    & ul .footer__text--i i {
+        margin-right: 10px;
+    }
+    & ul .footer__text--i:nth-child(3) i {
+        font-size: 15px;
+    }
+}

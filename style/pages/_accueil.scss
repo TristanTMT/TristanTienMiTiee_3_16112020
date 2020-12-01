@@ -1,0 +1,196 @@
+.reservation {
+    &__city {
+        @extend %flexbox;
+        justify-content: center;
+        background: $colorMap;
+        height: 40px;
+        box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.5);
+        & input {
+            background: $colorMap;
+            border: none;
+            text-align: center;
+            width: 30%;
+            &::placeholder{
+                font-weight: 600;
+                color: black;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+    }
+    & i {
+        margin-right: 10px;
+    }
+}
+
+.reservation__content {
+    @extend %flexbox;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: $colorContainer;
+    padding: 30px;
+    & .buttonAcceuil {
+        @extend %flexbox;
+        justify-content: center;
+        margin: 1rem;
+        @include btn( 30px, $colorCard, linear-gradient($colorSecondary, $colorPrimary));
+        border: none;
+        box-shadow: 1px 4px 14px 1px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        @include size(200px, 45px);
+        &:hover {
+            opacity: 0.9;
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+    }
+    @media (min-width: $tablet) {
+        flex-direction: column;
+    }
+}
+
+.fonctionnality {
+    padding: 10px;
+    margin: 30px 0 30px 0;
+    &__buttons {
+        @media (min-width: $tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+    }
+    &__buttons--button {
+        @extend %flexbox;
+        margin: 20px 0 20px 0;
+        @include btn(10px, black, $colorContainer);
+        border: none;
+        box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        @include size(100%, 60px);
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        & span {
+            position: relative;
+            right: 5px;
+            background: $colorPrimary;
+            color: #fff;
+            border-radius: 50%;
+            height: 18px;
+            width: 18px;
+            text-align: center;
+        }
+        & i.fa-store {
+            color: $colorPrimary;
+        }
+        & .fas {
+            transition: transform 900ms ease;
+            color: $colorMap;
+        }
+        &:hover .fas {
+            color: $colorPrimary;
+            transform: scale(1.7);
+        }
+        &>* {
+            border: none;
+            margin-right: 20px;
+        }
+        @media (min-width: $tablet) {
+            height: 150px;
+        }
+    }
+}
+
+.restaurants {
+    background: $colorContainer;
+    padding: 50px 10px 50px 10px;
+    &__title {
+        margin-bottom: 20px;
+    }
+}
+
+.restaurants__card {
+    position: relative;
+    margin-bottom: 20px;
+    @include btn(10px, black, #fff);
+    box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
+    & img {
+        @include size(100%, 150px);
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+// .restaurants__row {
+//     @media (min-width: $tablet) {
+//         display: grid;
+//         grid-template-columns: repeat(2, 1fr);
+//         grid-gap: 30px;
+//     }
+//     @media (min-width: $desktop) {
+//         display: grid;
+//         grid-template-columns: repeat(4, 1fr);
+//         grid-gap: 10px;
+//     }
+// }
+
+.restaurants__popup {
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 70%);
+    color: green;
+    background: $colorTertiary;
+    padding: 8px;
+}
+
+.restaurants__content {
+    @extend %flexbox;
+    justify-content: space-between;
+    padding: 10px 20px 15px 10px;
+    &--block1 .restaurants__content--titre {
+        margin-bottom: 4px;
+    }
+}
+
+.reservation .reservation__content p{
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+.spinnerLoader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient($colorSecondary, $colorPrimary);
+    @extend %flexbox;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.spinnerLoader div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.spinnerLoader div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.spinnerLoader div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.spinnerLoader div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
