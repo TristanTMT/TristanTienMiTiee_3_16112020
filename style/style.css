@@ -11,24 +11,6 @@ header, .reservation__city, .reservation__content, .reservation__content .button
           align-items: center;
 }
 
-/*@keyframes boxReverse{
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(80px);
-    }
-}
-@keyframes box{
-    from {
-        transform: translateX(80px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-}
-*/
 /* Coeur */
 @-webkit-keyframes fil {
   0% {
@@ -79,6 +61,24 @@ header, .reservation__city, .reservation__content, .reservation__content .button
   }
 }
 
+/*@keyframes boxReverse{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(80px);
+    }
+}
+@keyframes box{
+    from {
+        transform: translateX(80px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+}
+*/
 * {
   margin: 0;
   padding: 0;
@@ -403,15 +403,21 @@ header h2 {
   margin-right: 20px;
 }
 
+.fonctionnality__buttons--button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0.75;
+}
+
 @media (min-width: 768px) {
   .fonctionnality__buttons--button {
-    height: 150px;
+    height: 100px;
   }
 }
 
 .restaurants {
   background: #f2f2f2;
-  padding: 50px 10px 50px 10px;
+  padding: 50px 10px 40px 10px;
 }
 
 .restaurants__title {
@@ -527,15 +533,14 @@ header h2 {
   }
 }
 
-@media (min-width: 768px) {
-  .background__image img {
-    border-radius: 50%;
-  }
+.background__image img {
+  height: 250px;
+  width: 100%;
 }
 
 .menus {
   position: relative;
-  margin-top: -30px;
+  margin-top: -20px;
   background: #f2f2f2;
   border-radius: 30px 30px 0 0;
   padding: 1rem;
@@ -587,8 +592,8 @@ header h2 {
   -webkit-box-shadow: 0px 2px 8px #dedede;
           box-shadow: 0px 2px 8px #dedede;
   font-size: 14px;
-  -webkit-animation: fondu 2s ease;
-          animation: fondu 2s ease;
+  -webkit-animation: fondu 3s ease-in-out forwards;
+          animation: fondu 3s ease-in-out forwards;
 }
 
 .menusCard__content--title {
@@ -681,6 +686,26 @@ header h2 {
   font-size: 1.5rem;
 }
 
+.menusCard.item1 {
+  -webkit-animation: fondu 2s ease-in-out forwards;
+          animation: fondu 2s ease-in-out forwards;
+}
+
+.menusCard.item2 {
+  -webkit-animation: fondu 2.4s ease-in-out forwards;
+          animation: fondu 2.4s ease-in-out forwards;
+}
+
+.menusCard.item3 {
+  -webkit-animation: fondu 2.6s ease-in-out forwards;
+          animation: fondu 2.6s ease-in-out forwards;
+}
+
+.menusCard.item4 {
+  -webkit-animation: fondu 2.8s ease-in-out forwards;
+          animation: fondu 2.8s ease-in-out forwards;
+}
+
 .buttonMenus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -713,6 +738,10 @@ header h2 {
   padding: 20px;
 }
 
+#footer .logo .footer__logo {
+  font-size: 16px;
+}
+
 #footer li {
   margin: 5px;
 }
@@ -734,12 +763,18 @@ header h2 {
 }
 
 @media (max-width: 330px) {
+  .menusCard__content--title {
+    font-size: 13px;
+  }
   .lineClamp--2 h3, .lineClamp--2 p {
     -webkit-line-clamp: 2;
   }
 }
 
 @media (min-width: 768px) {
+  .reservation__city input {
+    width: 15%;
+  }
   .restaurants__popup {
     position: absolute;
     top: auto;
@@ -749,10 +784,6 @@ header h2 {
   }
   .main {
     padding: 0 2rem 0 2rem;
-  }
-  .background__image img {
-    height: 350px;
-    width: 350px;
   }
   .background__image {
     display: -webkit-box;
@@ -764,7 +795,6 @@ header h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 1rem 0 5rem 0;
   }
   .restaurants__row {
     display: -ms-grid;
@@ -775,13 +805,18 @@ header h2 {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .container__menusCards {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menusCard {
+    width: 320px;
   }
 }
 
@@ -796,19 +831,12 @@ header h2 {
     bottom: 80%;
     left: 83%;
   }
-  .container__menusCards {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-  }
-  .menus {
-    background: none;
-  }
 }
 
 @media (min-width: 1440px) {
+  .reservation__city input {
+    width: 10%;
+  }
   .restaurants__popup {
     position: absolute;
     top: auto;
@@ -817,18 +845,27 @@ header h2 {
     left: 78%;
   }
   .restaurants__row {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
   }
-  .background__image img {
-    height: 450px;
-    width: 450px;
-  }
   .container__menusCards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
+  }
+  #footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

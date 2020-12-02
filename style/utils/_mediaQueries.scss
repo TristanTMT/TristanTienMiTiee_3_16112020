@@ -1,4 +1,9 @@
 @media (max-width: $portable) {
+  .menusCard {
+    &__content--title{
+      font-size: 13px;
+    }
+  }
   .lineClamp--2 {
     & h3, p{
       -webkit-line-clamp: 2;
@@ -6,21 +11,21 @@
   }
 }
 @media (min-width: $tablet) {
+  .reservation__city {
+    & input {
+      width: 15%;
+    }
+  }
   .restaurants__popup {
     @include absoluteOrRelative(absolute, auto, auto, 80%, 78%);
   }
   .main {
       padding: 0 2rem 0 2rem;
     }
-  .background__image img {
-    height: 350px;
-    width: 350px;
-  }
   .background__image {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0 5rem 0;
   }
   .restaurants__row {
     display: grid;
@@ -29,12 +34,15 @@
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 1439px){
   .container__menusCards{
-      display: grid;
-      grid-template-columns: 1fr 1fr; 
-      grid-gap: 3rem;
-  }
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    & .menusCard {
+      width: 320px;
+    }
 }
 
 @media (min-width: $laptop) {
@@ -44,31 +52,29 @@
   .restaurants__popup {
     @include absoluteOrRelative(absolute, auto, auto, 80%, 83%);
   }
-  .container__menusCards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-  }
-  .menus {
-    background: none;
-  }
 }
 @media (min-width: $desktop) {
+  .reservation__city {
+    & input {
+      width: 10%;
+    }
+  }
   .restaurants__popup {
     @include absoluteOrRelative(absolute, auto, auto, 80%, 78%);
   }
   .restaurants__row {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     // grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
   }
-  .background__image img {
-    height: 450px;
-    width: 450px;
-  }
   .container__menusCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
+  }
+  #footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

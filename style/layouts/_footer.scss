@@ -2,6 +2,9 @@
     background: $colorFooter;
     color: $colorTextFooter;
     padding: 20px;
+    & .logo .footer__logo {
+        font-size: 16px;
+    }
     li {
         margin: 5px;
     }
