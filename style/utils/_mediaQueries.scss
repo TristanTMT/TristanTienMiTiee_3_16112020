@@ -1,4 +1,4 @@
-@media (max-width: 330px) {
+@media (max-width: $portable) {
   .lineClamp--2 {
     & h3, p{
       -webkit-line-clamp: 2;

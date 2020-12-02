@@ -2,7 +2,6 @@
 @import "./utils/mixins";
 @import "./utils/placeholders";
 @import "./utils/keyframes";
-@import "./utils/mediaQueries";
 @import "./base/base";
 @import "./components/loadingSpinner";
 @import "./components/heart";
@@ -10,3 +9,4 @@
 @import "./pages/accueil";
 @import "./pages/menu";
 @import "./layouts/footer";
+@import "./utils/mediaQueries";

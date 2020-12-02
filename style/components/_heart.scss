@@ -36,8 +36,8 @@
         position: relative;
         color: $colorPrimary;
         //-webkit-text-fill-color: red;
+        font-size: 26px;
         opacity: 0;
-        font-size: 25px;
         &:hover {
             animation: fil 1s ease-in-out forwards;
         }
