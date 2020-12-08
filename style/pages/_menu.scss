@@ -56,14 +56,18 @@
     display: inline;
     width: 100%;
     z-index: 1;
+    overflow: hidden; // Le texte ne sort pas du cadre
     & h3 {
         margin-bottom: 0.5rem;
     }
     & h3, p{
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        display: -webkit-box;
-        overflow: hidden;
+        // -webkit-line-clamp: 1;
+        // -webkit-box-orient: vertical;
+        // display: -webkit-box;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        overflow: hidden; //Pour éviter que le texte se mette à la ligne d'une façon peu esthétique
+        white-space: nowrap;
         text-overflow: ellipsis;
     }
   }
