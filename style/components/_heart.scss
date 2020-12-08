@@ -1,35 +1,15 @@
 .heart {
     cursor: pointer;
-    // & .fas.fa-heart.first {
-    //     -webkit-text-stroke: black 1px;
-    //     color: transparent;
-    //     font-size: 25px;
-    //     position: relative;
-    //     &::after {
-    //         content: "\f004";
-    //         font-family: "Font Awesome 5 Free";
-    //         position: absolute;
-    //         background-clip: text;
-    //         background: linear-gradient($colorSecondary, $colorPrimary);
-    //         color: transparent;
-    //         -webkit-text-stroke: 0px;
-    //         right: -1px;
-    //         transform: scale(0);
-    //         transition: opacity 500ms ease, transform 500ms ease;
-    //         opacity: 0;
-    //     }
-    //     &:hover {
-    //         cursor: pointer;
-    //         &::after {
-    //             opacity: 1;
-    //             transform: scale(1.07);
-    //         }
-    //     }
-    // }
     & .fas.fa-heart.first {
         position: absolute;
-        -webkit-text-stroke: black 1px;
-        color: transparent;
+        // -webkit-text-stroke: black 1px;
+        // color: transparent;
+        /* https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
+        text-shadow: -0.7px 0.7px 0 #000,
+				  0.7px 0.7px 0 #000,
+				 0.7px -0.7px 0 #000,
+				-0.7px -0.7px 0 #000;
+        color: $colorContainer;
         font-size: 25px;
     }
     & .fas.fa-heart.second {

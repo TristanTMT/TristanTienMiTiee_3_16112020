@@ -13,7 +13,7 @@ header, .reservation__city, .reservation__content, .reservation__content .button
     transform: scale(0.5);
   }
   100% {
-    transform: scale(1.05);
+    transform: scale(1.12);
     opacity: 1;
   }
 }
@@ -127,7 +127,6 @@ a:visited {
   border: 16px solid white;
   border-radius: 50%;
   border-top: 16px solid #99E2D0;
-  background: white;
   width: 120px;
   height: 120px;
   animation: spin 5s forwards;
@@ -149,8 +148,9 @@ a:visited {
 
 .heart .fas.fa-heart.first {
   position: absolute;
-  -webkit-text-stroke: black 1px;
-  color: transparent;
+  /* https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
+  text-shadow: -0.7px 0.7px 0 #000, 0.7px 0.7px 0 #000, 0.7px -0.7px 0 #000, -0.7px -0.7px 0 #000;
+  color: #f2f2f2;
   font-size: 25px;
 }
 
@@ -175,7 +175,7 @@ header .return {
   margin-left: 1rem;
 }
 
-header h2 {
+header h1 {
   font-family: 'Shrikhand', cursive;
   font-size: 30px;
   margin: auto;
@@ -348,8 +348,8 @@ header h2 {
   margin-bottom: 4px;
 }
 
-.reservation .reservation__content p {
-  margin: 1rem 0 1rem 0;
+.reservation .reservation__content p, h2 {
+  margin: 0.5rem 0 1rem 0;
   text-align: center;
 }
 
@@ -482,7 +482,7 @@ header h2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid #99E2D0;
+  border: 1px solid none;
   background: #99E2D0;
   height: 100%;
   width: 60px;
@@ -591,10 +591,7 @@ header h2 {
 
 @media (max-width: 330px) {
   .menusCard__content--title {
-    font-size: 13px;
-  }
-  .lineClamp--2 h3, .lineClamp--2 p {
-    -webkit-line-clamp: 2;
+    font-size: 12.5px;
   }
 }
 
