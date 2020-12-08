@@ -78,3 +78,42 @@
     justify-content: center;
   }
 }
+
+@media (min-width: $desktop4K) {
+  .wrapper{
+    padding: 0 5rem 0 5rem;
+  }
+  .fonctionnality{
+    padding: 0 5rem 0 5rem;
+    &__buttons{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      &--button{
+        width: 20%;
+        margin: 0.5rem;
+      }
+    }
+  }
+  .restaurants{
+    padding: 2rem 5rem 2rem 5rem;
+    &__row{
+      grid-gap: 5rem;
+    }
+  }
+  .main {
+    padding: 0 5rem 0 5rem;
+  }
+  .menus{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container__menusCards{
+    grid-gap: 10rem;
+  }
+  .row{
+    display: flex;
+    align-items: center;
+  }
+}

@@ -300,7 +300,7 @@ header h1 {
 
 @media (min-width: 768px) {
   .fonctionnality__buttons--button {
-    height: 100px;
+    height: 80px;
   }
 }
 
@@ -669,6 +669,45 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (min-width: 2560px) {
+  .wrapper {
+    padding: 0 5rem 0 5rem;
+  }
+  .fonctionnality {
+    padding: 0 5rem 0 5rem;
+  }
+  .fonctionnality__buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnality__buttons--button {
+    width: 20%;
+    margin: 0.5rem;
+  }
+  .restaurants {
+    padding: 2rem 5rem 2rem 5rem;
+  }
+  .restaurants__row {
+    grid-gap: 5rem;
+  }
+  .main {
+    padding: 0 5rem 0 5rem;
+  }
+  .menus {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .container__menusCards {
+    grid-gap: 10rem;
+  }
+  .row {
+    display: flex;
+    align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
