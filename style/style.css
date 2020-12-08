@@ -3,61 +3,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 header, .reservation__city, .reservation__content, .reservation__content .buttonAcceuil, .fonctionnality__buttons--button, .restaurants__content, .spinnerLoader, .menus__title, .buttonMenus, #footer li:nth-child(2), #footer li:nth-child(3) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 /* Coeur */
-@-webkit-keyframes fil {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    opacity: 1;
-  }
-}
 @keyframes fil {
   0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.12);
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes fondu {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
   }
 }
 
 @keyframes fondu {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -82,8 +50,7 @@ header, .reservation__city, .reservation__content, .reservation__content .button
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .header__log,
@@ -104,10 +71,8 @@ body {
 
 img {
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 63%;
-     object-position: 50% 63%;
+  object-fit: cover;
+  object-position: 50% 63%;
 }
 
 button {
@@ -137,31 +102,13 @@ a:visited {
   top: 0;
   left: 0;
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   z-index: 99;
   position: fixed;
-  -webkit-animation: loader-end 2s 2s both;
-          animation: loader-end 2s 2s both;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  animation: loader-end 2s 2s both;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@-webkit-keyframes loader-end {
-  0% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    z-index: -100;
-  }
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes loader-end {
@@ -180,33 +127,17 @@ a:visited {
   border: 16px solid white;
   border-radius: 50%;
   border-top: 16px solid #99E2D0;
-  background: white;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 5s forwards;
-          animation: spin 5s forwards;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    opacity: 0;
-  }
+  animation: spin 5s forwards;
 }
 
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
     opacity: 0;
   }
 }
@@ -217,8 +148,9 @@ a:visited {
 
 .heart .fas.fa-heart.first {
   position: absolute;
-  -webkit-text-stroke: black 1px;
-  color: transparent;
+  /* https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
+  text-shadow: -0.7px 0.7px 0 #000, 0.7px 0.7px 0 #000, 0.7px -0.7px 0 #000, -0.7px -0.7px 0 #000;
+  color: #f2f2f2;
   font-size: 25px;
 }
 
@@ -230,36 +162,30 @@ a:visited {
 }
 
 .heart .fas.fa-heart.second:hover {
-  -webkit-animation: fil 1s ease-in-out forwards;
-          animation: fil 1s ease-in-out forwards;
+  animation: fil 1s ease-in-out forwards;
 }
 
 header {
   height: 50px;
   margin-bottom: 0.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 header .return {
   margin-left: 1rem;
 }
 
-header h2 {
+header h1 {
   font-family: 'Shrikhand', cursive;
   font-size: 30px;
   margin: auto;
 }
 
 .reservation__city {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background: #d6d6d6;
   height: 40px;
-  -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .reservation__city input {
@@ -267,24 +193,6 @@ header h2 {
   border: none;
   text-align: center;
   width: 30%;
-}
-
-.reservation__city input::-webkit-input-placeholder {
-  font-weight: 600;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-}
-
-.reservation__city input:-ms-input-placeholder {
-  font-weight: 600;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-}
-
-.reservation__city input::-ms-input-placeholder {
-  font-weight: 600;
-  color: black;
-  font-family: 'Roboto', sans-serif;
 }
 
 .reservation__city input::placeholder {
@@ -298,27 +206,20 @@ header h2 {
 }
 
 .reservation__content {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
   background: #f2f2f2;
   padding: 30px;
 }
 
 .reservation__content .buttonAcceuil {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 1rem;
   border-radius: 30px;
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  -webkit-box-shadow: 1px 4px 14px 1px rgba(0, 0, 0, 0.4);
-          box-shadow: 1px 4px 14px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 4px 14px 1px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   width: 200px;
   height: 45px;
@@ -326,16 +227,12 @@ header h2 {
 
 .reservation__content .buttonAcceuil:hover {
   opacity: 0.9;
-  -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
   .reservation__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -346,10 +243,8 @@ header h2 {
 
 @media (min-width: 768px) {
   .fonctionnality__buttons {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
   }
 }
@@ -360,8 +255,7 @@ header h2 {
   color: black;
   background: #f2f2f2;
   border: none;
-  -webkit-box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   width: 100%;
   height: 60px;
@@ -385,17 +279,13 @@ header h2 {
 }
 
 .fonctionnality__buttons--button .fas {
-  -webkit-transition: -webkit-transform 900ms ease;
-  transition: -webkit-transform 900ms ease;
   transition: transform 900ms ease;
-  transition: transform 900ms ease, -webkit-transform 900ms ease;
   color: #d6d6d6;
 }
 
 .fonctionnality__buttons--button:hover .fas {
   color: #9356DC;
-  -webkit-transform: scale(1.7);
-          transform: scale(1.7);
+  transform: scale(1.7);
 }
 
 .fonctionnality__buttons--button > * {
@@ -404,7 +294,6 @@ header h2 {
 }
 
 .fonctionnality__buttons--button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   opacity: 0.75;
 }
@@ -430,8 +319,7 @@ header h2 {
   border-radius: 10px;
   color: black;
   background: #fff;
-  -webkit-box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
 }
 
 .restaurants__card img {
@@ -452,9 +340,7 @@ header h2 {
 }
 
 .restaurants__content {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 10px 20px 15px 10px;
 }
 
@@ -462,8 +348,8 @@ header h2 {
   margin-bottom: 4px;
 }
 
-.reservation .reservation__content p {
-  margin: 1rem 0 1rem 0;
+.reservation .reservation__content p, h2 {
+  margin: 0.5rem 0 1rem 0;
   text-align: center;
 }
 
@@ -471,65 +357,42 @@ header h2 {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 99999;
 }
 
 .spinnerLoader div {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   position: absolute;
   width: 50px;
   height: 50px;
   border: 8px solid #fff;
   border-radius: 50%;
-  -webkit-animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-          animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: #fff transparent transparent transparent;
 }
 
 .spinnerLoader div:nth-child(1) {
-  -webkit-animation-delay: -0.45s;
-          animation-delay: -0.45s;
+  animation-delay: -0.45s;
 }
 
 .spinnerLoader div:nth-child(2) {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
+  animation-delay: -0.3s;
 }
 
 .spinnerLoader div:nth-child(3) {
-  -webkit-animation-delay: -0.15s;
-          animation-delay: -0.15s;
-}
-
-@-webkit-keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+  animation-delay: -0.15s;
 }
 
 @keyframes loader {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -547,9 +410,7 @@ header h2 {
 }
 
 .menus__title {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 10px 10px 10px 0;
 }
 
@@ -573,15 +434,9 @@ header h2 {
 }
 
 .menusCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
   overflow: hidden;
   cursor: pointer;
   background: white;
@@ -589,17 +444,16 @@ header h2 {
   max-width: 100%;
   padding-left: 10px;
   border-radius: 12px;
-  -webkit-box-shadow: 0px 2px 8px #dedede;
-          box-shadow: 0px 2px 8px #dedede;
+  box-shadow: 0px 2px 8px #dedede;
   font-size: 14px;
-  -webkit-animation: fondu 3s ease-in-out forwards;
-          animation: fondu 3s ease-in-out forwards;
+  animation: fondu 3s ease-in-out forwards;
 }
 
 .menusCard__content--title {
   display: inline;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 
 .menusCard__content--title h3 {
@@ -607,20 +461,14 @@ header h2 {
 }
 
 .menusCard__content--title h3, .menusCard__content--title p {
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .menusCard__animation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .menusCard__animation--price {
@@ -631,16 +479,10 @@ header h2 {
 }
 
 .menusCard__animation--valid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid #99E2D0;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid none;
   background: #99E2D0;
   height: 100%;
   width: 60px;
@@ -649,7 +491,6 @@ header h2 {
   z-index: 2;
   position: relative;
   margin-right: -3.8rem;
-  -webkit-transition: margin-right 500ms ease-in-out;
   transition: margin-right 500ms ease-in-out;
 }
 
@@ -669,17 +510,12 @@ header h2 {
 }
 
 .menusCard .menusCard__animation--valid span {
-  -webkit-transform: rotate(-1turn);
-          transform: rotate(-1turn);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: rotate(-1turn);
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .menusCard:hover .menusCard__animation--valid span {
-  -webkit-transform: rotate(0turn);
-          transform: rotate(0turn);
+  transform: rotate(0turn);
 }
 
 .menusCard .menusCard__animation--valid span i {
@@ -687,40 +523,32 @@ header h2 {
 }
 
 .menusCard.item1 {
-  -webkit-animation: fondu 2s ease-in-out forwards;
-          animation: fondu 2s ease-in-out forwards;
+  animation: fondu 2s ease-in-out forwards;
 }
 
 .menusCard.item2 {
-  -webkit-animation: fondu 2.4s ease-in-out forwards;
-          animation: fondu 2.4s ease-in-out forwards;
+  animation: fondu 2.4s ease-in-out forwards;
 }
 
 .menusCard.item3 {
-  -webkit-animation: fondu 2.6s ease-in-out forwards;
-          animation: fondu 2.6s ease-in-out forwards;
+  animation: fondu 2.6s ease-in-out forwards;
 }
 
 .menusCard.item4 {
-  -webkit-animation: fondu 2.8s ease-in-out forwards;
-          animation: fondu 2.8s ease-in-out forwards;
+  animation: fondu 2.8s ease-in-out forwards;
 }
 
 .buttonMenus {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 30px 0 50px 0;
 }
 
 .buttonMenus .buttonMenus__btn {
   border-radius: 30px;
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  -webkit-box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 150px;
   height: 50px;
@@ -728,8 +556,7 @@ header h2 {
 
 .buttonMenus .buttonMenus__btn:hover {
   opacity: 0.9;
-  -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
 }
 
 #footer {
@@ -764,10 +591,7 @@ header h2 {
 
 @media (max-width: 330px) {
   .menusCard__content--title {
-    font-size: 13px;
-  }
-  .lineClamp--2 h3, .lineClamp--2 p {
-    -webkit-line-clamp: 2;
+    font-size: 12.5px;
   }
 }
 
@@ -786,34 +610,22 @@ header h2 {
     padding: 0 2rem 0 2rem;
   }
   .background__image {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .restaurants__row {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .container__menusCards {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   .menusCard {
     width: 320px;
@@ -845,27 +657,18 @@ header h2 {
     left: 78%;
   }
   .restaurants__row {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
   }
   .container__menusCards {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
   }
   #footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
