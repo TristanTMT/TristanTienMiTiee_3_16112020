@@ -274,17 +274,13 @@ header h1 {
   text-align: center;
 }
 
-.fonctionnality__buttons--button i.fa-store {
-  color: #9356DC;
-}
-
 .fonctionnality__buttons--button .fas {
   transition: transform 900ms ease;
   color: #d6d6d6;
 }
 
 .fonctionnality__buttons--button:hover .fas {
-  color: #9356DC;
+  color: #9356dc;
   transform: scale(1.7);
 }
 
@@ -294,7 +290,7 @@ header h1 {
 }
 
 .fonctionnality__buttons--button:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: rgba(255, 121, 218, 0.4);
   opacity: 0.75;
 }
 
@@ -649,6 +645,16 @@ header h1 {
   .reservation__city input {
     width: 10%;
   }
+  .fonctionnality {
+    padding: 0 5rem 0 5rem;
+  }
+  .fonctionnality__buttons {
+    grid-gap: 3rem;
+  }
+  .fonctionnality__buttons--button {
+    width: 80%;
+    margin: 0.5rem;
+  }
   .restaurants__popup {
     position: absolute;
     top: auto;
@@ -665,28 +671,27 @@ header h1 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
   }
-  #footer {
+  #footer .row {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  #footer li:first-child {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1440px) and (min-width: 2560px) {
   .wrapper {
     padding: 0 5rem 0 5rem;
   }
   .fonctionnality {
     padding: 0 5rem 0 5rem;
   }
-  .fonctionnality__buttons {
+  .fonctionnality__buttons--button {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  .fonctionnality__buttons--button {
-    width: 20%;
     margin: 0.5rem;
   }
   .restaurants {
@@ -704,10 +709,6 @@ header h1 {
   }
   .container__menusCards {
     grid-gap: 10rem;
-  }
-  .row {
-    display: flex;
-    align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
