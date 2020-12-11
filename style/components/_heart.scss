@@ -9,7 +9,7 @@
 				  0.7px 0.7px 0 #000,
 				 0.7px -0.7px 0 #000,
 				-0.7px -0.7px 0 #000;
-        color: $colorContainer;
+        color: rgba($colorContainer, 1);
         font-size: 25px;
     }
     & .fas.fa-heart.second {

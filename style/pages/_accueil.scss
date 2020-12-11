@@ -61,11 +61,11 @@
     &__buttons--button {
         @extend %flexbox;
         margin: 20px 0 20px 0;
-        @include btn(10px, black, $colorContainer);
+        @include btn(15px, black, $colorContainer);
         border: none;
         box-shadow: 1px 6px 14px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
-        @include size(100%, 60px);
+        @include size(100%, 65px);
         font-weight: 600;
         font-family: 'Roboto', sans-serif;
         & span {
@@ -94,7 +94,7 @@
             margin-right: 20px;
         }
         &:hover {
-            background: rgba($colorSecondary, 0.4);
+            background: rgba($colorPrimary, 0.3);
             opacity: 0.75;
             
         }
@@ -137,7 +137,7 @@
 // }
 
 .restaurants__popup {
-    @include absoluteOrRelative(absolute, auto, auto, 80%, 70%);
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 73.5%);
     color: green;
     background: $colorTertiary;
     padding: 8px;

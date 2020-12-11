@@ -10,6 +10,11 @@
   //   }
   // }
 }
+@media (max-width: 425px) {
+  .restaurants__popup {
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 80%);
+  }
+}
 @media (min-width: $tablet) {
   .reservation__city {
     & input {
@@ -17,7 +22,7 @@
     }
   }
   .restaurants__popup {
-    @include absoluteOrRelative(absolute, auto, auto, 80%, 78%);
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 77%);
   }
   .main {
       padding: 0 2rem 0 2rem;
@@ -50,7 +55,7 @@
     padding: 0 2rem 0 2rem;
   }
   .restaurants__popup {
-    @include absoluteOrRelative(absolute, auto, auto, 80%, 83%);
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 80%);
   }
 }
 @media (min-width: $desktop) {
@@ -70,7 +75,7 @@
     }
   }
   .restaurants__popup {
-    @include absoluteOrRelative(absolute, auto, auto, 80%, 78%);
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 250px);
   }
   .restaurants__row {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -113,6 +118,9 @@
     &__row{
       grid-gap: 5rem;
     }
+  }
+  .restaurants__popup {
+    @include absoluteOrRelative(absolute, auto, auto, 80%, 83%);
   }
   .main {
     padding: 0 5rem 0 5rem;
